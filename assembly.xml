@@ -1,0 +1,26 @@
+<assembly>
+    <id>distribution</id>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <formats>
+        <format>dir</format>
+        <format>zip</format>
+    </formats>
+    <files>
+        <file>
+            <source>src/main/bin/retention-policy.sh</source>
+            <outputDirectory></outputDirectory>
+            <filtered>false</filtered>
+        </file>
+        <file>
+            <source>target/${project.artifactId}-${project.version}.jar</source>
+            <outputDirectory></outputDirectory>
+            <filtered>false</filtered>
+        </file>
+    </files>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>lib</outputDirectory>
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.version}.${artifact.extension}</outputFileNameMapping>
+        </dependencySet>
+    </dependencySets>
+</assembly>
