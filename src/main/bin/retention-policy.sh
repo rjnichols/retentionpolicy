@@ -1,2 +1,2 @@
 #!/bin/bash
-java -jar RetentionPolicy-1.0-SNAPSHOT.jar "$@"
+java -jar "$( dirname "$0" )/RetentionPolicy-1.0-SNAPSHOT.jar" "$@"
